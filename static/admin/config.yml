@@ -14,4 +14,4 @@ collections:
     fields:
       - { label: "ID", name: "id", widget: "string" }
       - { label: "Заголовок", name: "title", widget: "string" }
-      - { label: "Тело документа", name: "body", widget: "markdown" } 
+      - { label: "Тело документа", name: "body", widget: "markdown" }
