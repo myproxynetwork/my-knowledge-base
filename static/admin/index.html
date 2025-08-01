@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Decap CMS</title>
+    <title>Tina CMS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/admin/js/decap-cms.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@tinacms/auth@1.1.0/dist/index.global.js"></script>
+    <script src="https://unpkg.com/tinacms@2.8.1/dist/tinacms.min.js"></script>
     <script>
-      console.log('Loading Decap CMS script...');
-      window.CMS_MANUAL_INIT = true;
-      document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOMContentLoaded triggered');
-        if (window.CMS) {
-          console.log('Decap CMS loaded successfully');
-          window.CMS.init({
-            config: {
-              backend: {
-                name: 'github',
-                repo: 'myproxynetwork/my-knowledge-base',
-                branch: 'main',
-                auth_type: 'implicit',
-                app_id: 'Ov23liyrcFGHuoQ2clmp',
-                site_url: 'http://80.240.20.135'
-              },
-              publish_mode: 'editorial_workflow',
-              media_folder: 'static/images/uploads',
-              public_folder: '/images/uploads',
-              collections: [
-                {
-                  name: 'docs',
-                  label: 'Документация',
-                  folder: 'docs',
-                  create: true,
-                  slug: '{{slug}}',
-                  fields: [
-                    { label: 'ID', name: 'id', widget: 'string' },
-                    { label: 'Заголовок', name: 'title', widget: 'string' },
-                    { label: 'Тело документа', name: 'body', widget: 'markdown' }
-                  ]
-                }
-              ]
-            }
+      const tina = new window.TinaCMS({
+        enabled: true,
+        sidebar: true,
+        apis: {
+          github: new window.TinaCMS.GitHub({
+            clientId: 'Ov23liyrcFGHuoQ2clmp',
+            owner: 'myproxynetwork',
+            repo: 'my-knowledge-base',
+            branch: 'main'
+          })
+        }
+      });
+      tina.registerPlugin({
+        __type: 'content-creator',
+        name: 'Create New Document',
+        fields: [
+          { name: 'id', label: 'ID', type: 'string' },
+          { name: 'title', label: 'Заголовок', type: 'string' },
+          { name: 'body', label: 'Тело документа', type: 'rich-text' }
+        ],
+        onSubmit: async (values) => {
+          await tina.apis.github.createDocument({
+            collection: 'docs',
+            path: `docs/${values.id}.md`,
+            content: `---\nid: ${values.id}\ntitle: ${values.title}\n---\n${values.body}`
           });
-        } else {
-          console.error('Decap CMS not loaded');
         }
       });
     </script>
   </head>
   <body>
-    <div id="cms-root"></div>
+    <div id="root"></div>
   </body>
 </html>
