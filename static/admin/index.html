@@ -4,12 +4,18 @@
     <title>Decap CMS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com;">
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com;">
+    <script src="/admin/js/decap-cms.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true;
       document.addEventListener('DOMContentLoaded', () => {
-        window.CMS.init();
+        setTimeout(() => {
+          if (window.CMS) {
+            window.CMS.init();
+          } else {
+            console.error('Decap CMS not loaded');
+          }
+        }, 1000); // Задержка 1 секунда
       });
     </script>
   </head>
