@@ -18,13 +18,12 @@ export default defineConfig({
     collections: [
       {
         name: 'docs',
-        label: 'Документация',
+        label: 'Documentation',
         path: 'docs',
         format: 'md',
         fields: [
-          { type: 'string', name: 'id', label: 'ID' },
-          { type: 'string', name: 'title', label: 'Заголовок', isTitle: true, required: true },
-          { type: 'rich-text', name: 'body', label: 'Тело документа', isBody: true }
+          { type: 'string', name: 'title', label: 'Title', isTitle: true, required: true },
+          { type: 'rich-text', name: 'body', label: 'Body', isBody: true }
         ]
       }
     ]

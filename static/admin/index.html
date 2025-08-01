@@ -4,11 +4,12 @@
     <title>Tina CMS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@tinacms/auth@1.1.0/dist/index.global.js"></script>
-    <script src="https://unpkg.com/tinacms@2.8.1/dist/tinacms.min.js"></script>
+    <script src="/admin/js/react.production.min.js"></script>
+    <script src="/admin/js/react-dom.production.min.js"></script>
+    <script src="/admin/js/tinacms-auth.js"></script>
+    <script src="/admin/js/tinacms.min.js"></script>
     <script>
+      console.log('Loading Tina CMS...');
       const tina = new window.TinaCMS({
         enabled: true,
         sidebar: true,
@@ -26,8 +27,8 @@
         name: 'Create New Document',
         fields: [
           { name: 'id', label: 'ID', type: 'string' },
-          { name: 'title', label: 'Заголовок', type: 'string' },
-          { name: 'body', label: 'Тело документа', type: 'rich-text' }
+          { name: 'title', label: 'Title', type: 'string' },
+          { name: 'body', label: 'Body', type: 'rich-text' }
         ],
         onSubmit: async (values) => {
           await tina.apis.github.createDocument({
