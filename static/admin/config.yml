@@ -4,7 +4,7 @@ backend:
   branch: main
   auth_type: implicit
   app_id: Ov23liyrcFGHuoQ2clmp
-  site_url: http://80.240.20.135
+ site_url: http://80.240.20.135
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
