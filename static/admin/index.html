@@ -4,15 +4,43 @@
     <title>Decap CMS</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="/admin/js/decap-cms.js"></script>
     <script>
+      console.log('Loading Decap CMS script...');
       window.CMS_MANUAL_INIT = true;
-      console.log('Attempting to load Decap CMS...');
       document.addEventListener('DOMContentLoaded', () => {
         console.log('DOMContentLoaded triggered');
         if (window.CMS) {
           console.log('Decap CMS loaded successfully');
-          window.CMS.init();
+          window.CMS.init({
+            config: {
+              backend: {
+                name: 'github',
+                repo: 'myproxynetwork/my-knowledge-base',
+                branch: 'main',
+                auth_type: 'implicit',
+                app_id: 'Ov23liyrcFGHuoQ2clmp',
+                site_url: 'http://80.240.20.135'
+              },
+              publish_mode: 'editorial_workflow',
+              media_folder: 'static/images/uploads',
+              public_folder: '/images/uploads',
+              collections: [
+                {
+                  name: 'docs',
+                  label: 'Документация',
+                  folder: 'docs',
+                  create: true,
+                  slug: '{{slug}}',
+                  fields: [
+                    { label: 'ID', name: 'id', widget: 'string' },
+                    { label: 'Заголовок', name: 'title', widget: 'string' },
+                    { label: 'Тело документа', name: 'body', widget: 'markdown' }
+                  ]
+                }
+              ]
+            }
+          });
         } else {
           console.error('Decap CMS not loaded');
         }
