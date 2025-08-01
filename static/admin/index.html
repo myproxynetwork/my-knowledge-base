@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com;">
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+      document.addEventListener('DOMContentLoaded', () => {
+        window.CMS.init();
+      });
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div id="cms-root"></div>
+  </body>
 </html>
