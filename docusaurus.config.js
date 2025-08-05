@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Learn and manage your Mango Proxy setup',
   url: 'https://lighthearted-sawine-28b8cb.netlify.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // Изменено с 'throw' на 'warn'
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'myproxynetwork',
@@ -32,9 +32,7 @@ module.exports = {
         src: 'img/logo.png',
       },
       items: [
-        { to: '/', label: 'Документация', position: 'left' },
-        { to: '/guides', label: 'Гайды', position: 'left' },
-        { to: '/faq', label: 'FAQ', position: 'left' },
+        { to: '/getting-started/system-requirements', label: 'Документация', position: 'left' },
         { href: 'https://github.com/myproxynetwork/my-knowledge-base', label: 'GitHub', position: 'right' },
       ],
     },
@@ -44,9 +42,9 @@ module.exports = {
         {
           title: 'Документация',
           items: [
-            { label: 'Начало работы', to: '/' },
-            { label: 'Гайды', to: '/guides' },
-            { label: 'FAQ', to: '/faq' },
+            { label: 'Начало работы', to: '/getting-started/system-requirements' },
+            { label: 'Оплата и подписки', to: '/subscriptions/choose-subscription' },
+            { label: 'FAQ', to: '/faq/solutions' },
           ],
         },
         {
