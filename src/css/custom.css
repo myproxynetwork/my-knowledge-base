@@ -1,16 +1,22 @@
 :root {
-  --ifm-color-primary: #FF6F61; /* Оранжевый цвет Mango Proxy */
-  --ifm-color-primary-dark: #e65a4e;
-  --ifm-color-primary-darker: #d94f43;
-  --ifm-color-primary-darkest: #b83f35;
-  --ifm-color-primary-light: #ff8b7e;
-  --ifm-color-primary-lighter: #ff9c91;
-  --ifm-color-primary-lightest: #ffbdb5;
+  --ifm-color-primary: #FDB602; /* Новый цвет бренда Mango Proxy */
+  --ifm-color-primary-dark: #e4a502;
+  --ifm-color-primary-darker: #d79a02;
+  --ifm-color-primary-darkest: #b07e01;
+  --ifm-color-primary-light: #fdbf35;
+  --ifm-color-primary-lighter: #fdc951;
+  --ifm-color-primary-lightest: #fee18a;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-background-color: #FFFFFF; /* Белый фон в светлом режиме */
+}
+[data-theme='dark'] {
+  --ifm-background-color: #000000; /* Чёрный фон в тёмном режиме */
+  --ifm-color-primary: #FDB602;
 }
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: var(--ifm-background-color);
 }
 .navbar__logo img {
   height: 40px;

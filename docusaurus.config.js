@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Learn and manage your Mango Proxy setup',
   url: 'https://lighthearted-sawine-28b8cb.netlify.app',
   baseUrl: '/',
-  onBrokenLinks: 'warn', // Изменено с 'throw' на 'warn'
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'myproxynetwork',
@@ -16,6 +16,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl: 'https://github.com/myproxynetwork/my-knowledge-base/edit/main/',
+          homePageId: 'getting-started/system-requirements', // Открываем документацию сразу
         },
         blog: false,
         theme: {
