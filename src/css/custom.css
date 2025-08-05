@@ -1,0 +1,20 @@
+:root {
+  --ifm-color-primary: #FF6F61; /* Оранжевый цвет Mango Proxy */
+  --ifm-color-primary-dark: #e65a4e;
+  --ifm-color-primary-darker: #d94f43;
+  --ifm-color-primary-darkest: #b83f35;
+  --ifm-color-primary-light: #ff8b7e;
+  --ifm-color-primary-lighter: #ff9c91;
+  --ifm-color-primary-lightest: #ffbdb5;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Roboto', sans-serif;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.navbar__logo img {
+  height: 40px;
+}
+.footer {
+  background-color: #1a1a1a;
+}
