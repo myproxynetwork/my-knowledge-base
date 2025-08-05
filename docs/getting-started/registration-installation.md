@@ -157,5 +157,3 @@ Fill in "on"
 ![Скопируйте код](https://static.guidde.com/v0/qg%2F9DwPKzQaDWV5hbDXHcazRFHZBWP2%2FhFJ4ghsPwNYKcUkJMCiQ8o%2Fm5EoiXfxWQTSSxVvYSXQu4_doc.png?alt=media&token=fca43bdb-f6a7-45fd-ab82-f87cefea522f)
 
 В этом руководстве приведены подробные инструкции по созданию прокси с помощью Mangoproxy. От включения определенных функций до настройки параметров вы узнали, как эффективно создавать прокси. С легкостью освоите процесс и оптимизируйте рабочий процесс генерации прокси.
-
-[Powered by **guidde**](https://www.guidde.com)
