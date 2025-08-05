@@ -9,10 +9,12 @@
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Roboto', sans-serif;
   --ifm-background-color: #FFFFFF;
+  --ifm-logo-url: url('/img/logo-light.png');
 }
 [data-theme='dark'] {
   --ifm-background-color: #000000;
   --ifm-color-primary: #FDB602;
+  --ifm-logo-url: url('/img/logo-dark.png');
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -20,6 +22,7 @@ body {
 }
 .navbar__logo img {
   height: 40px;
+  content: var(--ifm-logo-url);
 }
 .footer {
   background-color: #1a1a1a;

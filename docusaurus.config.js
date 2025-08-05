@@ -8,6 +8,14 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'myproxynetwork',
   projectName: 'my-knowledge-base',
+  i18n: {
+    defaultLocale: 'ru',
+    locales: ['ru', 'en'],
+    localeConfigs: {
+      ru: { label: 'Русский' },
+      en: { label: 'English' },
+    },
+  },
   presets: [
     [
       'classic',
@@ -29,11 +37,16 @@ module.exports = {
       title: 'Mango Proxy',
       logo: {
         alt: 'Mango Proxy Logo',
-        src: 'img/logo.png',
+        src: 'img/logo-light.png',
+        srcDark: 'img/logo-dark.png',
       },
       items: [
         { to: '/getting-started/system-requirements', label: 'Документация', position: 'left' },
         { href: 'https://github.com/myproxynetwork/my-knowledge-base', label: 'GitHub', position: 'right' },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     footer: {
@@ -51,6 +64,8 @@ module.exports = {
           title: 'Сообщество',
           items: [
             { label: 'GitHub', href: 'https://github.com/myproxynetwork/my-knowledge-base' },
+            { label: 'Twitter', href: 'https://twitter.com/mangoproxy' },
+            { label: 'Discord', href: 'https://discord.gg/mangoproxy' },
           ],
         },
         {
@@ -70,6 +85,11 @@ module.exports = {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
+    },
+    algolia: {
+      appId: 'YOUR_APP_ID',
+      apiKey: 'YOUR_API_KEY',
+      indexName: 'YOUR_INDEX_NAME',
     },
   },
 };
