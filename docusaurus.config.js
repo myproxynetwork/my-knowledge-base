@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon2.ico', // Добавлен параметр версии для избежания кэша
   organizationName: 'myproxynetwork',
   projectName: 'my-knowledge-base',
   i18n: {
@@ -32,6 +32,7 @@ module.exports = {
       },
     ],
   ],
+  themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
     navbar: {
       title: 'Mango Proxy',
@@ -53,14 +54,6 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Документация',
-          items: [
-            { label: 'Начало работы', to: '/getting-started/system-requirements' },
-            { label: 'Оплата и подписки', to: '/subscriptions/choose-subscription' },
-            { label: 'FAQ', to: '/faq/solutions' },
-          ],
-        },
-        {
           title: 'Сообщество',
           items: [
             { label: 'GitHub', href: 'https://github.com/myproxynetwork/my-knowledge-base' },
@@ -75,7 +68,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Mango Proxy`,
+      copyright: `Copyright © ${new Date().getFullYear()} Docs`,
     },
     prism: {
       theme: require('prism-react-renderer').themes.github,
@@ -85,11 +78,6 @@ module.exports = {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
-    },
-    algolia: {
-      appId: 'YOUR_APP_ID',
-      apiKey: 'YOUR_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
     },
   },
 };
