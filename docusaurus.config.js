@@ -17,7 +17,7 @@ module.exports = {
           routeBasePath: '/',
           editUrl: 'https://github.com/myproxynetwork/my-knowledge-base/edit/main/',
         },
-        blog: false, // Удаляем блог
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -29,7 +29,7 @@ module.exports = {
       title: 'Mango Proxy',
       logo: {
         alt: 'Mango Proxy Logo',
-        src: 'img/logo.png', // Замени на путь к логотипу Mango Proxy
+        src: 'img/logo.png',
       },
       items: [
         { to: '/', label: 'Документация', position: 'left' },
@@ -65,8 +65,8 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Mango Proxy`,
     },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/dracula'),
+      theme: require('prism-react-renderer').themes.github,
+      darkTheme: require('prism-react-renderer').themes.dracula,
     },
     colorMode: {
       defaultMode: 'light',
