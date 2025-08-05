@@ -2,6 +2,7 @@
 id: system-requirements
 title: Системные требования
 sidebar_label: Системные требования
+slug: /
 ---
 # Системные требования
 Для работы с Mango Proxy необходимы:

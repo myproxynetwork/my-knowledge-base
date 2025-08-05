@@ -16,7 +16,6 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl: 'https://github.com/myproxynetwork/my-knowledge-base/edit/main/',
-          homePageId: 'getting-started/system-requirements', // Открываем документацию сразу
         },
         blog: false,
         theme: {

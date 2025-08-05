@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #FDB602; /* Новый цвет бренда Mango Proxy */
+  --ifm-color-primary: #FDB602;
   --ifm-color-primary-dark: #e4a502;
   --ifm-color-primary-darker: #d79a02;
   --ifm-color-primary-darkest: #b07e01;
@@ -8,10 +8,10 @@
   --ifm-color-primary-lightest: #fee18a;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Roboto', sans-serif;
-  --ifm-background-color: #FFFFFF; /* Белый фон в светлом режиме */
+  --ifm-background-color: #FFFFFF;
 }
 [data-theme='dark'] {
-  --ifm-background-color: #000000; /* Чёрный фон в тёмном режиме */
+  --ifm-background-color: #000000;
   --ifm-color-primary: #FDB602;
 }
 body {
