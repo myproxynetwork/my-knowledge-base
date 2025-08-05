@@ -26,4 +26,5 @@ body {
 }
 .footer {
   background-color: #1a1a1a;
+  border-top: 2px solid #FDB602; /* Разделительная линия */
 }

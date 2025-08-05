@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'Mango Proxy Knowledge Base',
+  title: 'Docs',
   tagline: 'Learn and manage your Mango Proxy setup',
   url: 'https://lighthearted-sawine-28b8cb.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon2.ico', // Добавлен параметр версии для избежания кэша
+  favicon: 'img/favicon2.ico?v=3', // Версия для избежания кэша
   organizationName: 'myproxynetwork',
   projectName: 'my-knowledge-base',
   i18n: {
@@ -32,10 +32,9 @@ module.exports = {
       },
     ],
   ],
-  themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
     navbar: {
-      title: 'Mango Proxy',
+      title: 'Docs',
       logo: {
         alt: 'Mango Proxy Logo',
         src: 'img/logo-light.png',
@@ -46,6 +45,10 @@ module.exports = {
         { href: 'https://github.com/myproxynetwork/my-knowledge-base', label: 'GitHub', position: 'right' },
         {
           type: 'localeDropdown',
+          position: 'right',
+        },
+        {
+          type: 'search',
           position: 'right',
         },
       ],
@@ -68,7 +71,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Docs`,
+      copyright: `Copyright © ${new Date().getFullYear()} MANGOPROXY`,
     },
     prism: {
       theme: require('prism-react-renderer').themes.github,
