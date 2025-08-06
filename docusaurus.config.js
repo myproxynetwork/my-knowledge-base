@@ -41,7 +41,7 @@ module.exports = {
         srcDark: 'img/logo-dark.png',
       },
       items: [
-        { to: '/getting-started/system-requirements', label: 'Документация', position: 'left' },
+        { to: '/начало-работы/регистрация', label: 'Документация', position: 'left' },
         { href: 'https://github.com/myproxynetwork/my-knowledge-base', label: 'GitHub', position: 'right' },
         {
           type: 'localeDropdown',
