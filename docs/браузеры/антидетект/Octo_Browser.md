@@ -1,4 +1,4 @@
-## **Octo Browser**
+#Octo Browser
 
 ### **Шаг 1: Войдите в панель управления Mango Proxy**
 
