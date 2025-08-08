@@ -19,11 +19,11 @@
 
 ```mermaid
 flowchart TD
-User -->|Запрос (например, открыть сайт)| HTTPProxy[HTTP(S)-Прокси]
-HTTPProxy -->|Запрос| TargetWebsite[Целевой сайт]
-TargetWebsite -->|Ответ| HTTPProxy
-HTTPProxy -->|Ответ| User
-````
+User --> HTTPProxy[HTTP(S) Proxy]
+HTTPProxy --> TargetWebsite[Target Website]
+TargetWebsite --> HTTPProxy
+HTTPProxy --> User
+```
 
 Пользователь отправляет HTTP-запрос → Прокси передаёт его целевому сайту → Получает ответ и возвращает его обратно. При этом сайт видит **IP-адрес прокси**, а не пользователя.
 
