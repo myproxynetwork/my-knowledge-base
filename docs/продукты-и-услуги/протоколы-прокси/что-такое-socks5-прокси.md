@@ -13,8 +13,8 @@
 ```mermaid
 flowchart LR
 user[Пользователь] --> socks5[SOCKS5-прокси]
-socks5 --> target[Целевой ресурс (любой тип)]
-target --> socks5
+socks5 --> site[Целевой ресурс]
+site --> socks5
 socks5 --> user
 ```
 
